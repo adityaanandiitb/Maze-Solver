@@ -1,0 +1,24 @@
+Problems occured
+1.)Path Shortning
+When the battery drains it doesn't supply as much currunt as required so at the intersection
+//the array aling with intersection first
+//the values from 1st and 5th sensors are taken and conditions are checked 
+//then the bot moves a bit ahead
+//then it turns 
+//if battery drains it wont move ahead the correct distance
+#solution is use a boost converter 
+
+
+We made the following functions
+
+//calibrate() : rotate the bot on the surface and run a loop 3000 times each time storing the analog value from each sensor and after the loop ends we have the minvalue and the maxvalue of each sensor stored in array then we find the mean value for each sensor and store it in threshold array.
+
+//linefollow() : here we want to follow a line, since the sensor 2 and 4 are the closest to slip away from line we will find the difference
+between their analog value. Using it we will find the PID value and set the motor speed accordingly.
+we will break from the linefollow() if an intersection or end of maze comes
+
+//DecisionMaking() : after detecting an intersection in the linefollow() we will be directed here to decide for Left, Straight, Right or stop the output will be L,S,R,B,Stop
+
+/* not using anymore //TakingTurns() : After the decision making is done it will send the decision to Takingturnb() and this function will turn accordingly.
+
+//....please write the rest of the function uses here..../
